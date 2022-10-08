@@ -19,9 +19,3 @@ export const StLogoText = styled.h1`
     font-size: 25px;
     margin-left: 10px;
 `;  
-
-export const StNavigation = styled.nav`
-    text-align: center;
-`
-
-export const StNavigationLink = styled.a``;

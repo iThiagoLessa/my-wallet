@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const StToggleContent = styled.div`
     display: flex;
-    align-item: center;
+    align-items: center;
 `
 
 export const StSpan = styled.span`

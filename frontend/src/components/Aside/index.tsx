@@ -1,17 +1,22 @@
-import { StAsite, StHeader, StLogoText, StNavigation, StNavigationLink } from "./styles";
+import { StAsite, StHeader, StLogoText } from "./styles";
 import MonetizationOnRoundedIcon from '@material-ui/icons/MonetizationOnRounded';
+import MenuNavigation from "./components/MenuNavigation";
+import MenuItems from "./utils/MenuItems";
 
 const Aside = () => {
+   
     return (
         <StAsite>
+
             <StHeader>
                 <MonetizationOnRoundedIcon />
                 <StLogoText>Minha Carteira</StLogoText>
             </StHeader>
 
-            <StNavigation>
-                <StNavigationLink>Dashboard</StNavigationLink>
-            </StNavigation>
+            <MenuNavigation
+                MenuItems={MenuItems}
+            />
+
         </StAsite>
     )
 }
