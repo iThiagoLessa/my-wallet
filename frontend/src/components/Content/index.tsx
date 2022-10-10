@@ -1,9 +1,13 @@
-import { StContent } from "./styles"
+import { StContent } from "./styles";
 
-const Content = () => {
+interface IContentProps {
+    children: React.ReactNode;
+}
+
+const Content: React.FC<IContentProps> = ({ children }) => {
     return(
         <StContent>
-            <h1>Content</h1>
+            {children}
         </StContent>
     )
 }

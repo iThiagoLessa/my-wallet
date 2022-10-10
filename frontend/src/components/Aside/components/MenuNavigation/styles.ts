@@ -16,7 +16,7 @@ export const StNavigationLink = styled.a<StNavigationLinkInterface>`
     margin-bottom: 20px;
     cursor: pointer;
     &:hover {
-        color: ${props => props.theme.colors.info};
+        color: #dd8010;
     }
 `;
 

@@ -8,8 +8,8 @@ const MainHeader = () => {
         <StMainHeader>
 
             <ToggleSwitch
-                textChecked="light"
-                textUnchecked="dark"
+                textChecked="Light"
+                textUnchecked="Dark"
             />
 
             <StContainerUser>

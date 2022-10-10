@@ -33,11 +33,31 @@ const MenuNavigation: React.FC<IProps> = ({ MenuItems }) => {
         }
     }
 
+    const handleUrl = (elm: string) => {
+        const treatedUrl = elm.normalize('NFD').replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-').toLocaleLowerCase();
+        const createPath = (elm: string) => {
+            
+            // tratar url para saidas e entradas
+            if(elm.toLocaleLowerCase() === 'entradas' || elm.toLocaleLowerCase() === 'saídas') {
+                return `/list/${treatedUrl}`
+            }
+
+            return `/${treatedUrl}`
+        }
+
+        console.log("createPath", createPath(elm))
+
+        return createPath(treatedUrl);
+    }
+
     return (
         <StNavigation>
             {
                 MenuItems.map((item, index) => (
-                    <StNavigationLink key={index}>
+                    <StNavigationLink 
+                        key={index}
+                        href={`${handleUrl(item)}`}
+                    >
                         {handleIcons(item)}
                         <StSpanMenu>{item}</StSpanMenu>
                     </StNavigationLink>
