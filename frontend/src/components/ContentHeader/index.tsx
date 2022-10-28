@@ -1,11 +1,17 @@
 import SelectInput from "../SelectInput";
 import { StHeader } from "./styles";
 
-const ContentHeader = () => {
+interface IContentHeader {
+    title: string;
+}
+
+const ContentHeader: React.FC<IContentHeader> = ({
+    title
+}) => {
     return (
         <>
             <StHeader>
-                <h3>Entradas</h3>
+                <h3>{title}</h3>
             </StHeader>
             <SelectInput />
         </>

@@ -8,4 +8,5 @@ export const StToggleContent = styled.div`
 
 export const StSpan = styled.span`
     font-size: 18px;
+    color: ${({theme}) => theme.colors.white};
 `

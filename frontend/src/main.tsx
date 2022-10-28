@@ -1,20 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import './index.css';
-import '@fontsource/roboto';
-import { ThemeProvider as MaterialUiThemeProvider } from "@material-ui/core/styles";
-import storeMUI from './components/store/MaterialUi/styles';
-import { ThemeProvider } from "styled-components";
-import dark from "./styles/themes/dark";
-import light from "./styles/themes/light";
+import "@fontsource/roboto";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
+import App from "./App";
+import "./index.css";
+import store from "./store/storeConfig";
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <ThemeProvider theme={dark}>
-      <MaterialUiThemeProvider theme={storeMUI}>
-        <App />
-      </MaterialUiThemeProvider>
-    </ThemeProvider>
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
-)
+);

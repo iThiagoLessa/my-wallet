@@ -13,6 +13,7 @@ export const StContainerUser = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    color: ${props => props.theme.colors.white}
 `;
 
 export const StWelcome = styled.h6`

@@ -10,4 +10,4 @@ const Routes: React.FC = () => {
     )
 }
 
-export default Routes
+export default Routes;
